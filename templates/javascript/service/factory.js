@@ -1,23 +1,32 @@
-'use strict';
+(function () {
+  'use strict';
 
-/**
- * @ngdoc service
- * @name <%= scriptAppName %>.<%= cameledName %>
- * @description
- * # <%= cameledName %>
- * Factory in the <%= scriptAppName %>.
- */
-angular.module('<%= scriptAppName %>')
-  .factory('<%= cameledName %>', function () {
-    // Service logic
-    // ...
+  /**
+   * @ngdoc service
+   * @name <%= scriptAppName %>.<%= cameledName %>
+   * @description
+   * # <%= cameledName %>
+   * Factory in the <%= scriptAppName %>.
+   * You think you want a factory.
+   * You really want a service.
+   *
+   * Trust me.
+   */
 
-    var meaningOfLife = 42;
+  class <%= cameledName %>Service {
 
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
-      }
-    };
-  });
+    constructor (/* Injectables go here */) {
+      // Initialization logic goes here. No Promises allowed.
+    }
+
+    static get $injector () {
+      return [
+        // list your injectable names here
+      ]
+    }
+  }
+
+  angular.module('<%= scriptAppName %>')
+    .service('<%= cameledName %>', <%= cameledName %>Service)
+
+})()

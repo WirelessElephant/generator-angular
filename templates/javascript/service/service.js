@@ -1,13 +1,26 @@
-'use strict';
+(function () {
+  'use strict';
+  /**
+   * @ngdoc service
+   * @name <%= scriptAppName %>.<%= cameledName %>
+   * @description
+   * # <%= cameledName %>
+   * Service in the <%= scriptAppName %>.
+   */
 
-/**
- * @ngdoc service
- * @name <%= scriptAppName %>.<%= cameledName %>
- * @description
- * # <%= cameledName %>
- * Service in the <%= scriptAppName %>.
- */
-angular.module('<%= scriptAppName %>')
-  .service('<%= cameledName %>', function () {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-  });
+  class <%= cameledName %>Service {
+
+    constructor (/* Injected names go here */) {
+      // instanciation logic goes here
+    }
+
+    static get $injector () {
+      return [
+        // injectables go here
+      ]
+    }
+  }
+
+  angular.module('<%= scriptAppName %>')
+    .service('<%= cameledName %>', <%= cameledName %>Service)
+})()

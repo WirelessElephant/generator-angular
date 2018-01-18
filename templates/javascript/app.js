@@ -1,5 +1,6 @@
-'use strict';
+(function () {
 
+'use strict';
 /**
  * @ngdoc overview
  * @name <%= scriptAppName %>
@@ -10,7 +11,9 @@
  */
 angular
   .module('<%= scriptAppName %>', [<%= angularModules %>])<% if (ngRoute) { %>
-  .config(function ($routeProvider, $locationProvider) {
+  .config(<%= scriptAppName %>Config)
+
+  function <%= scriptAppName %>Config ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -23,3 +26,5 @@ angular
 
     $locationProvider.hashPrefix('');
   })<% } %>;
+
+})()
