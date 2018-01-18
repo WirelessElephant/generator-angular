@@ -2,6 +2,8 @@
 
 > Yeoman generator for AngularJS - lets you quickly set up a project with sensible defaults and best practices.
 
+> The goal of this fork is to add support for modern Javascript (ES7, currently) and conform to the accepted styleguide. This includes modifying the templates to encourage best practices using modern Javascript, outlined in [angular-styleguide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#single-responsibility). If you need to target browsers that are outside the [Evergreen Browsers](https://www.techopedia.com/definition/31094/evergreen-browser), this fork is not for you.
+
 There are many starting points for building a new Angular single page app, in addition to this one. You can find
 other options in this list at 
 [Yeoman.io](http://yeoman.io/generators).
